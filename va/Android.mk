@@ -35,8 +35,8 @@ ALOG_VERSION := $(filter $(ALOG_VERSION_REQ),$(firstword $(sort $(PLATFORM_VERSI
 
 include $(CLEAR_VARS)
 
-#LIBVA_MINOR_VERSION := 31
-#LIBVA_MAJOR_VERSION := 0 
+#LIBVA_MINOR_VERSION := 39
+#LIBVA_MAJOR_VERSION := 1
 
 LOCAL_SRC_FILES := \
 	va.c \
@@ -67,16 +67,21 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_COPY_HEADERS := \
 	va.h \
-	va_backend.h \
+	va_version.h \
 	va_dec_hevc.h \
 	va_dec_jpeg.h \
-	va_drmcommon.h \
+	va_dec_vp8.h \
+	va_dec_vp9.h \
+	va_enc_h264.h \
 	va_enc_hevc.h \
 	va_enc_jpeg.h \
+	va_enc_mpeg2.h \
 	va_enc_vp8.h \
 	va_enc_vp9.h \
-	va_dec_vp9.h \
-	va_version.h
+	va_backend.h \
+	va_drmcommon.h \
+	va_vpp.h \
+	va_backend_vpp.h \
 
 LOCAL_COPY_HEADERS_TO := libva/va
 

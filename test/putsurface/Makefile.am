@@ -22,7 +22,7 @@
 
 bin_PROGRAMS = putsurface
 
-AM_CPPFLAGS = \
+INCLUDES = \
 	-I$(top_srcdir)		\
 	-I$(top_builddir)	\
 	$(NULL)
